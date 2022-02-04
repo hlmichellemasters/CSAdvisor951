@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+	
+<topic name = "ADVISING">	
+
+    <category>
+        <pattern>START ADVISING</pattern>
+        <template> 
+                  I'm a chatbot designed to help you decide what kind of jobs 
+                  to apply for after graduating.<br></br><br></br>
+                  Are you a graduating Computer Science student looking for help 
+                  picking your career?
+        </template>
+    </category>
+    
+    <category>
+        <pattern>NO</pattern>
+        <template>That's mostly all I know how to do, but you are welcome
+        to talk to me about other stuff anyway!</template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <template>Great, let's get you advised! Do you have any experience in these fields?
+        <button>
+            <text>Software Development</text>
+            <postback>ENGINEER</postback>
+        </button>
+        <button>
+            <text>Software Quality Assurance</text>
+            <postback>TESTER</postback>
+        </button>
+        <button>
+            <text>Data Analysis</text>
+            <postback>ANALYST</postback>
+        </button>
+        <button>
+            <text>Information Security</text>
+            <postback>SEC OPS</postback>
+        </button>
+        <button>
+            <text>Database Administration</text>
+            <postback>ADMIN</postback>
+        </button>
+        <button>
+            <text>No experience in these yet</text>
+            <postback>NOEXPERIENCE</postback>
+        </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>ENGINEER</pattern>
+        <template>
+            <card>
+                <image>https://fjwp.s3.amazonaws.com/blog/wp-content/uploads/2020/05/02124829/Software-Engineer.png</image>
+                <title>How about being a Software Engineer?</title>
+                <subtitle>Since you have experience in software development, 
+                you could be a software engineer</subtitle>
+                <button>
+                    <text>Read more about being a Software Engineer</text>
+                    <url>https://www.flexjobs.com/blog/post/what-does-a-software-engineer-do/</url>
+                </button>
+                <button>
+                    <text>Yes, that's the job for me</text>
+                    <postback>FOUND THE JOB</postback>
+                </button>
+                <button>
+                    <text>No, I would like a different job</text>
+                    <postback>NOEXPERIENCE</postback>
+                </button>
+            </card>
+        </template>
+    </category>
+
+
+     <category>
+        <pattern>TESTER</pattern>
+        <template>
+            <card>
+                <image>https://res.cloudinary.com/hnpb47ejt/image/upload/v1523577295/ogagh3wkinsjveojnrpp.jpg</image>
+                <title>How about being a Software Engineer?</title>
+                <subtitle>Since you have experience in software development, 
+                you could become a software engineer</subtitle>
+                <button>
+                    <text>Read more about being a QA Software Tester</text>
+                    <url>https://www.careerexplorer.com/careers/software-quality-assurance-engineer/</url>
+                </button>
+                <button>
+                    <text>Yes, that's the job for me</text>
+                    <postback>FOUND THE JOB</postback>
+                </button>
+                <button>
+                    <text>No, I would like a different job</text>
+                    <postback>NOEXPERIENCE</postback>
+                </button>
+            </card>
+        </template>
+    </category>   
+    
+    <category>
+        <pattern>ANALYST</pattern>
+        <template>
+            <card>
+                <image>https://res.cloudinary.com/hnpb47ejt/image/upload/v1543874725/r6qnkvws4oogcwz0yjh9.jpg</image>
+                <title>How about being a Data Scientist?</title>
+                <subtitle>Since you have experience in data analysis, 
+                you could do that </subtitle>
+                <button>
+                    <text>Read more about being a Data Scientist</text>
+                    <url>https://www.careerexplorer.com/careers/data-scientist/</url>
+                </button>
+                    <text>Are you interested in applying to data scientist positions?</text>
+                <button>
+                    <text>Yes, that's the job for me</text>
+                    <postback>FOUND THE JOB</postback>
+                </button>
+                <button>
+                    <text>No, I would like a different job</text>
+                    <postback>NOEXPERIENCE</postback>
+                </button>
+            </card>
+        </template>
+    </category>
+    
+    
+    <category>
+        <pattern>SEC OPS</pattern>
+        <template>
+            <card>
+                <image>https://res.cloudinary.com/hnpb47ejt/image/upload/v1523995834/mbv7idiwakgmkvr90jt9.jpg</image>
+                <title>How about being a Security Engineer?</title>
+                <subtitle>Since you have experience in info security, 
+                you could be a security engineer</subtitle>
+                <button>
+                    <text>Read more about being a Security Engineer</text>
+                    <url>https://www.careerexplorer.com/careers/security-engineer/</url>
+                </button>
+                <button>
+                    <text>Yes, that's the job for me</text>
+                    <postback>FOUND THE JOB</postback>
+                </button>
+                <button>
+                    <text>No, I would like a different job</text>
+                    <postback>NOEXPERIENCE</postback>
+                </button>
+            </card>
+        </template>
+    </category>
+    
+    
+    <category>
+        <pattern>ADMIN</pattern>
+        <template>
+            <card>
+                <image>https://res.cloudinary.com/hnpb47ejt/image/upload/v1543866162/bwofgpko3wvb6mypxmer.jpg</image>
+                <title>How about being a Database Architect?</title>
+                <subtitle>Since you have experience in databases, 
+                you could be a Database Architect</subtitle>
+                <button>
+                    <text>Read more about being a Database Architect</text>
+                    <url>https://www.careerexplorer.com/careers/database-architect/</url>
+                </button>
+                <button>
+                    <text>Yes, that's the job for me</text>
+                    <postback>FOUND THE JOB</postback>
+                </button>
+                <button>
+                    <text>No, I would like a different job</text>
+                    <postback>NOEXPERIENCE</postback>
+                </button>
+            </card>
+        </template>
+    </category>    
+    
+    <category>
+        <pattern>NOEXPERIENCE</pattern>
+        <template>Sure, no problem.  Let's try another way of deciding. 
+        <br></br><br></br>
+        Which skill or trait most accurately describes you?
+        <button>
+            <text>Love of Learning</text>
+            <postback>ENGINEER</postback>
+        </button>
+        <button>
+            <text>High Attention to Detail</text>
+            <postback>TESTER</postback>
+        </button>
+        <button>
+            <text>Communication and Presentation</text>
+            <postback>ANALYST</postback>
+        </button>
+        <button>
+            <text>Vigilance</text>
+            <postback>SEC OPS</postback>
+        </button>
+        <button>
+            <text>Problem Solving</text>
+            <postback>ADMIN</postback>
+        </button>
+        <button>
+            <text>None of these describe me well</text>
+            <postback>WHAT WAS YOUR FAVORITE CLASS</postback>
+        </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>WHAT WAS YOUR FAVORITE CLASS</pattern>
+        <template>What was your favorite class of these options?
+        <button>
+            <text>Software</text>
+            <postback>ENGINEER</postback>
+        </button>
+        <button>
+            <text>Software Quality Assurance</text>
+            <postback>TESTER</postback>
+        </button>
+        <button>
+            <text>Data Management</text>
+            <postback>ANALYST</postback>
+        </button>
+        <button>
+            <text>Network and Security</text>
+            <postback>SEC OPS</postback>
+        </button>
+        <button>
+            <text>Advanced Data Management</text>
+            <postback>ADMIN</postback>
+        </button>
+        </template>
+    </category>
+    
+    
+    <category>
+        <pattern>FOUND THE JOB</pattern>
+        <template>Congratulations! If you want a back up option or change your mind, 
+        just say 'hi' again and we can talk about this some more.  Good luck on your job search!</template>
+    </category>
+</topic>
+
+</aiml>

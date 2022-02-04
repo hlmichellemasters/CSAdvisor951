@@ -24,12 +24,12 @@
 <template><srai>UDC</srai></template>
 </category>
 <category><pattern>UDC</pattern>
-<template><random>
-<li><srai>RANDOM PICKUP LINE</srai></li>
-<li><srai>INQUIRY AGE</srai></li>
-<li><srai>INQUIRY GENDER</srai></li>
-<li><srai>INQUIRY LOCATION</srai></li>
-</random></template>
+<template>Mostly I just advise students for the first job after graduation.  
+<br></br><br></br>Type "Advise me", if you would like to use my services.</template>
+</category>
+<category>
+    <pattern>ADVISE ME</pattern>
+    <template><srai>START ADVISING</srai></template>
 </category>
 <category><pattern>RANDOM PICKUP LINE</pattern>
 <template><random>
